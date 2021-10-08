@@ -231,72 +231,62 @@
 }
 
 .womens {
+    padding: 10px;
     &__inner {
         gap: 2%;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-auto-columns: minmax(auto, 25vw);
+        grid-auto-columns: minmax(auto, 25%);
         grid-template-rows: repeat(3, 1fr);
-        grid-auto-rows: minmax(auto, 25vw);
+        grid-auto-rows: minmax(auto, 25%);
     }
-    &__item-1 {
-        border: 10px solid #000000;
-    }
-    &__item-2 {
+    &__img {
         border: 10px solid #000000;
     }
     &__item-3 {
         grid-row-start: 1;
         grid-row-end: 4;
-        border: 10px solid #000000;
     }
     &__item-4 {
         grid-row-start: 1;
         grid-row-end: 4;
-        border: 10px solid #000000;
     }
     &__item-5 {
         grid-column-start: 5;
         grid-column-end: 6;
-        border: 10px solid #000000;
     }
     &__item-6 {
         grid-column-start: 6;
         grid-column-end: 7;
-        border: 10px solid #000000;
     }
     &__item-7 {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 4;
-        border: 10px solid #000000;
     }
     &__item-8 {
         grid-column-start: 5;
         grid-column-end: 6;
-        border: 10px solid #000000;
     }
     &__item-9 {
         grid-column-start: 6;
         grid-column-end: 7;
-        border: 10px solid #000000;
     }
     &__item-10 {
         grid-column-start: 5;
         grid-column-end: 7;
         grid-row-start: 3;
         grid-row-end: 4;
-        border: 10px solid #000000;
     }
-    &__slider {
-        background: rgba(239, 255, 138, 0.5);
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        grid-column-start: 1;
-        grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
+    // &__slider {
+    //     background: rgba(239, 255, 138, 0.5);
+    //     border: 1px solid #000000;
+    //     box-sizing: border-box;
+    //     grid-column-start: 1;
+    //     grid-column-end: 7;
+    //     grid-row-start: 4;
+    //     grid-row-end: 5;
+    // }
 }
