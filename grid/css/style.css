@@ -289,4 +289,9 @@
   grid-row-end: 4;
 }
 
+.video {
+  margin-top: 15px;
+  text-align: center;
+}
+
 .webp .home { background: url(../image/background-grid.webp); }
