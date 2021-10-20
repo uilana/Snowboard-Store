@@ -90,10 +90,23 @@
   text-align: center;
 }
 
+.downArrow__img:hover {
+  -webkit-animation-name: shakeY;
+          animation-name: shakeY;
+}
+
 .aboutUs__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-columns: minmax(auto, 25vw);
+}
+
+.aboutUs__item-1:hover {
+  -webkit-animation-name: rotateIn;
+          animation-name: rotateIn;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  overflow: hidden;
 }
 
 .grid__image {
@@ -350,7 +363,31 @@
 .news__inner {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'item-1 item-2' 'item-3 item-4' 'item-5 item-6';
+}
+
+.news__item-1 {
+  grid-area: item-1;
+}
+
+.news__item-2 {
+  grid-area: item-2;
+}
+
+.news__item-3 {
+  grid-area: item-3;
+}
+
+.news__item-4 {
+  grid-area: item-4;
+}
+
+.news__item-5 {
+  grid-area: item-5;
+}
+
+.news__item-6 {
+  grid-area: item-6;
 }
 
 .news__item {
@@ -429,6 +466,12 @@
   border: 3px solid #C4C4C4;
   padding: 16px 110px;
   margin-bottom: 5%;
+}
+
+.contact__button:hover {
+  color: rgba(0, 0, 0, 0.856);
+  border: 3px solid #C4C4C4;
+  background-color: #616161;
 }
 
 .button {
