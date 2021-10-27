@@ -1,4 +1,5 @@
 // @import 'animate.scss';
+// $color:hsl(220, 90%, 56%);
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,9 @@
 
 .home {
     background: url(../image/background-grid.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     // width: 100vw;
     height: 100vh;
     padding: 80px;
@@ -233,16 +237,36 @@
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    &__border {
-        border: 10px solid #000000;
-        background-repeat: no-repeat;
+    &__item-2 {
+        // border: 10px solid #000000;
     }
-    &__border:hover {
-        animation-name: rotateIn;
-        animation-duration: 3s;
+    &__img-2 {
+        clip-path: var(--maskClipPath);
+        display: block;
+        transition: clip-path .2s ease;
     }
-    &__item-3 {
-        border: 10px solid #000000;
+    &__mask {
+        // --uiMaskClipPath: var(--maskClipPath);
+        padding: 10px;
+        display: inline-flex;
+        background-color: #777777;
+    }
+    &__mask-type-1 {
+        --maskClipPath: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    }
+    &__mask-type-1:hover {
+        --maskClipPath: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    &__img-3 {
+        clip-path: var(--maskClipPath);
+        display: block;
+        transition: clip-path .3s ease;
+    }
+    &__mask-type-2 {
+        --maskClipPath: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    }
+    &__mask-type-2:hover {
+        --maskClipPath: polygon(18% 0, 84% 0, 100% 53%, 78% 100%, 19% 100%, 0 49%);
     }
     &__item-4 {
         grid-column-start: 2;
@@ -262,7 +286,34 @@
         grid-auto-rows: minmax(auto, 33vh);
     }
     &__img {
-        border: 3px solid #000000;
+        border: 3px solid#000000;
+    }
+    &__mask {
+        padding: 3px;
+        display: inline-flex;
+        background-color: #000000;
+    }
+    &__img-1 {
+        clip-path: var(--maskClipPath);
+        display: block;
+        transition: clip-path .1s ease;
+    }
+    &__mask-type-1 {
+        --maskClipPath: polygon(0 0, 69% 0, 100% 100%, 22% 100%);
+    }
+    &__mask-type-1:hover {
+        --maskClipPath: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+    &__img-8 {
+        clip-path: var(--maskClipPath);
+        display: block;
+        transition: clip-path .3s ease;
+    }
+    &__mask-type-8 {
+        --maskClipPath: polygon(18% 100%, 79% 100%, 100% 0, 0 0);
+    }
+    &__mask-type-8:hover {
+        --maskClipPath: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     }
     &__item-3 {
         grid-row-start: 1;
@@ -349,9 +400,6 @@
         grid-row-start: 1;
         grid-row-end: 4;
         padding: 20px;
-    }
-    &__img-2 {
-        border: none;
     }
 }
 
@@ -455,7 +503,7 @@
     }
     &__button:hover {
         color: rgba(0, 0, 0, 0.856);
-        border: 3px solid #C4C4C4;
+        border: 3px solid rgba(0, 0, 0, 0.856);
         background-color: rgb(97, 97, 97);
     }
 }
