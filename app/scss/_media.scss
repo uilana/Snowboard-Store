@@ -1,0 +1,343 @@
+@media (max-width: 1500px) {
+    .aboutUs {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-columns: minmax(auto, 25vw);
+            overflow: hidden;
+        }
+        &__item-1 {
+            display: none;
+        }
+        &__item-2 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            max-height: 530px;
+            max-width: 1920px;
+            overflow: auto;
+            white-space: normal;
+            grid-auto-rows: minmax();
+        }
+        &__item-3 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            max-height: 530px;
+            max-width: 960px;
+        }
+        &__item-4__text {
+            text-align: center;
+        }
+        &__item-5 {
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+        &__item-6 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-7 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+        &__item-8 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-9 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    }
+    .womens {
+        padding: 5px;
+        &__inner {
+            gap: 2%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            // grid-auto-columns: minmax(auto, 25%);
+            // grid-template-rows: repeat(3, 1fr);
+            grid-auto-rows: minmax(auto, 33vh);
+        }
+        &__item-1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item-3 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        &__item-4 {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        &__item-5 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item-7,
+        &__item-8,
+        &__item-9 {
+            display: none;
+        }
+        &__item-10 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    .sale {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            // grid-auto-rows: minmax(auto, 33vh);
+        }
+        &__item-3 {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .aboutUs {
+        &__item-3 {
+            display: none;
+        }
+        &__item-4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        color: #123052;
+    }
+    main {
+        margin-left: 3%;
+    }
+    #menu__toggle {
+        z-index: 15;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+    }
+    .menu__label>span,
+    .menu__label>span::before,
+    .menu__label>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+    }
+    .menu__label>span::before {
+        content: "";
+        top: -8px;
+    }
+    .menu__label>span::after {
+        content: "";
+        top: 8px;
+    }
+    #menu__toggle:checked~.menu__label>span::after {
+        transform: rotate(90deg);
+        top: 0;
+        left: 0;
+    }
+    #menu__toggle:checked~.menu__label>span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked~.menu__label>span::before {
+        transform: rotate(0);
+        top: 0;
+        left: 0;
+    }
+    #menu__toggle:checked~.header {
+        visibility: visible;
+        left: 0;
+    }
+    .header {
+        width: 100vw;
+        height: 100%;
+        background-color: #ff0000;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        visibility: hidden;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .logo {
+        flex-direction: column;
+    }
+    .list {
+        flex-direction: column;
+    }
+    .aboutUs {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-columns: minmax(auto, 25vw);
+        }
+        &__item {
+            position: relative;
+        }
+        &__item-2 {
+            margin: 0 0 0 40px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &__item-5 {
+            margin: 0 0 0 40px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item-7 {
+            margin: 0 0 0 40px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &__item-4,
+        &__item-8,
+        &__item-9 {
+            display: none;
+        }
+    }
+    .mens {
+        &__inner {
+            gap: 2%;
+        }
+        &__item {
+            margin: 50px;
+        }
+    }
+    .womens {
+        &__item-1 {
+            margin: 0 0 0 40px;
+        }
+        &__item-3 {
+            margin: 0 0 40px 0;
+        }
+        &__item-4 {
+            margin: 0 0 40px 0;
+        }
+        &__item-5 {
+            margin: 0 0 0 40px;
+        }
+        &__item-10 {
+            margin: 0 0 40px 40px;
+        }
+    }
+    .video {
+        display: none;
+    }
+    .sale {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            // grid-auto-rows: minmax(auto, 33vh);
+            margin: 0 0 0 40px;
+        }
+    }
+    .footer__inner {
+        margin: 0 0 0 50px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 880px) {
+    .mens {
+        &__inner {
+            gap: 2%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // grid-auto-columns: minmax(auto, 25%);
+            // grid-template-rows: repeat(3, 1fr);
+            grid-auto-rows: minmax(auto, 33vh);
+            overflow: auto;
+        }
+        &__item-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin: 10px 0 0 40px;
+        }
+        &__item-2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            margin: 40px;
+        }
+        &__item-3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            margin: 40px;
+        }
+        &__item-4 {
+            display: none;
+        }
+    }
+    .womens {
+        &__inner {
+            gap: 2%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // grid-auto-columns: minmax(auto, 25%);
+            // grid-template-rows: repeat(3, 1fr);
+            grid-auto-rows: minmax(auto, 33vh);
+        }
+        &__item-1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item-5 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__item-6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__item-10 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &__item-3,
+        &__item-4 {
+            display: none;
+        }
+    }
+    .sale {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // grid-auto-rows: minmax(auto, 33vh);
+            margin: 0 0 0 40px;
+        }
+    }
+}

@@ -1,9 +1,26 @@
 // @import 'animate.scss';
 // $color:hsl(220, 90%, 56%);
+@import 'media';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#menu__toggle {
+    display: none;
+}
+
+.menu__label {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 15;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    align-items: center;
 }
 
 .home {
@@ -97,6 +114,8 @@
         // max-width: 100vw;
         // width: 100%;
         grid-auto-columns: minmax(auto, 25vw);
+        // grid-auto-rows: minmax(auto, 33vh);
+        // grid-template-rows: repeat(3, 1fr);
     }
     &__item-img:hover {
         animation-name: rotateIn;
@@ -113,7 +132,101 @@
     &__item-1 {
         overflow: hidden;
     }
-    &__item-1:hover {}
+    &__item-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    &__item-2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        background: #4473A8;
+        &__txt {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex-direction: column;
+        }
+        &__title {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            line-height: 75px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 27px;
+        }
+        &__text {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    &__item-4 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        // grid-row-start: 2;
+        // grid-row-end: 3;
+        max-height: 580px;
+        max-width: 480px;
+        // display: block;
+        overflow: auto;
+        white-space: normal;
+        // width: 12em;
+        // height: 1em;
+        grid-auto-rows: minmax();
+    }
+    &__item-4__text {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        color: #000000;
+    }
+    // &__item-4__text {
+    //     font-weight: 300;
+    //     font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
+    // }
+    &__item-7 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background: rgba(68, 111, 162, 0.7);
+        &__title {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            line-height: 75px;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 27px;
+        }
+        &__text {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 42px;
+            color: #000000;
+        }
+    }
+    &__item-9__text {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        color: #000000;
+    }
 }
 
 .grid__image {
@@ -121,88 +234,6 @@
     height: 100%;
     display: block;
     object-fit: contain;
-}
-
-.aboutUs__item-1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.aboutUs__item-2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    background: #4473A8;
-    &__txt {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        flex-direction: column;
-    }
-    &__title {
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 64px;
-        line-height: 75px;
-        text-align: center;
-        color: #FFFFFF;
-        margin-bottom: 27px;
-    }
-    &__text {
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        color: #FFFFFF;
-    }
-}
-
-.aboutUs__item-4__text {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #000000;
-}
-
-.aboutUs__item-7 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background: rgba(68, 111, 162, 0.7);
-    &__title {
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 64px;
-        line-height: 75px;
-        text-align: center;
-        color: #000000;
-        margin-bottom: 27px;
-    }
-    &__text {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 42px;
-        color: #000000;
-    }
-}
-
-.aboutUs__item-9__text {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #000000;
 }
 
 .mens {
@@ -233,12 +264,16 @@
         -webkit-text-fill-color: transparent;
         z-index: 10;
     }
+    &__item-text::before {
+        content: "";
+        position: absolute;
+        color: #FFFFFF;
+        top: 0;
+        left: 0;
+    }
     &__item-1 {
         grid-column-start: 1;
         grid-column-end: 3;
-    }
-    &__item-2 {
-        // border: 10px solid #000000;
     }
     &__img-2 {
         clip-path: var(--maskClipPath);
@@ -410,10 +445,10 @@
 
 .sale {
     &__inner {
-        width: 100%;
+        // width: 90%;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-auto-rows: minmax(auto, 33vh);
+        grid-template-columns: repeat(5, 1fr);
+        // grid-auto-rows: minmax(auto, 33vh);
     }
     &__contanier {
         transform-style: preserve-3d;
@@ -470,7 +505,7 @@
     }
     &__back-inner,
     &__front-inner {
-        transform: translateY(-50%) translateZ(60px) scale(0.94);
+        transform: translateY(-50%) translateZ(60%) scale(0.94);
         position: absolute;
         top: 50%;
         left: 0;
