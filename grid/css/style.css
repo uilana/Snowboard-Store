@@ -288,10 +288,81 @@
   position: relative;
 }
 
-.mens__item-text {
+.mens__container-text-1 {
+  background-color: #FFFFFF;
+  -webkit-animation: identifier2 1s linear alternate forwards;
+          animation: identifier2 1s linear alternate forwards;
+}
+
+.mens__container-texts:hover .mens__container-text-1 {
+  -webkit-animation: identifier 1s linear alternate forwards;
+          animation: identifier 1s linear alternate forwards;
+}
+
+.mens__container-texts:hover .mens__container-text-2 {
+  animation: identifier 1s linear alternate-reverse forwards;
+}
+
+.mens__container-texts {
   position: absolute;
   top: 55px;
   left: 50px;
+}
+
+.mens__container-text-2 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  animation: identifier2 1s linear alternate-reverse forwards;
+}
+
+@-webkit-keyframes identifier {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+}
+
+@keyframes identifier {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+}
+
+@-webkit-keyframes identifier2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes identifier2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mens__item-text {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -301,14 +372,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 10;
-}
-
-.mens__item-text::before {
-  content: "";
-  position: absolute;
-  color: #FFFFFF;
-  top: 0;
-  left: 0;
+  background-image: url("../image/image6.png");
 }
 
 .mens__item-1 {
@@ -601,26 +665,13 @@
   min-height: 100%;
 }
 
-.sale__front::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #777777;
-  z-index: 1;
-  display: block;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
 .sale__front {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
+  background-color: #777777;
 }
 
 .sale__back {
@@ -633,18 +684,6 @@
   left: 0;
   width: 100%;
   background: #4473A8;
-}
-
-.sale__back-inner,
-.sale__front-inner {
-  -webkit-transform: translateY(-50%) translateZ(60%) scale(0.94);
-          transform: translateY(-50%) translateZ(60%) scale(0.94);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 2;
-  -webkit-perspective: inherit;
-          perspective: inherit;
 }
 
 .sale__img {
@@ -954,7 +993,7 @@
   }
 
   main {
-    margin-left: 3%;
+    margin-left: 10%;
   }
 
   #menu__toggle {
@@ -1053,13 +1092,11 @@
   }
 
   .aboutUs__item-2 {
-    margin: 0 0 0 40px;
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
   .aboutUs__item-5 {
-    margin: 0 0 0 40px;
     grid-column-start: 1;
     grid-column-end: 2;
   }
@@ -1070,7 +1107,6 @@
   }
 
   .aboutUs__item-7 {
-    margin: 0 0 0 40px;
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -1083,10 +1119,6 @@
 
   .mens__inner {
     gap: 2%;
-  }
-
-  .mens__item {
-    margin: 50px;
   }
 
   .womens__item-1 {
@@ -1116,19 +1148,30 @@
   .sale__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 0 0 40px;
   }
 
   .footer__inner {
-    margin: 0 0 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 880px) {
+  .home {
+    padding: 40px;
+  }
+
+  .title {
+    padding: 0;
+    margin: 20px;
+  }
+
   .mens__inner {
     gap: 2%;
     width: 100%;
@@ -1205,4 +1248,29 @@
   }
 }
 
+@media (max-width: 680px) {
+  .aboutUs__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .sale__item {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .sale__inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .webp .home { background: url(../image/background-grid.webp); }
+
+.webp .mens__item-text { background-image: url(../image/image6.webp); }
